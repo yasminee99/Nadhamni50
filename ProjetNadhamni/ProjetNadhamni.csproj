@@ -1,0 +1,735 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75764EEF-A76D-4CF1-A525-2E04C903D3AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjetNadhamni</RootNamespace>
+    <AssemblyName>ProjetNadhamni</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\Nadhamni\Nadhamni\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckRegistration.Designer.cs">
+      <DependentUpon>CheckRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailyPlanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyPlanning.Designer.cs">
+      <DependentUpon>DailyPlanning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBconnecting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBconnecting.Designer.cs">
+      <DependentUpon>DBconnecting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteTask.Designer.cs">
+      <DependentUpon>DeleteTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCategoryTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCategoryTask.Designer.cs">
+      <DependentUpon>EditCategoryTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditDateTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDateTask.Designer.cs">
+      <DependentUpon>EditDateTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEmail.Designer.cs">
+      <DependentUpon>EditEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEndTimeTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEndTimeTask.Designer.cs">
+      <DependentUpon>EditEndTimeTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditFirstName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditFirstName.Designer.cs">
+      <DependentUpon>EditFirstName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditingDone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditingDone.Designer.cs">
+      <DependentUpon>EditingDone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditInvolvedTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditInvolvedTask.Designer.cs">
+      <DependentUpon>EditInvolvedTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditLastName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditLastName.Designer.cs">
+      <DependentUpon>EditLastName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditLocationTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditLocationTask.Designer.cs">
+      <DependentUpon>EditLocationTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditNameTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditNameTask.Designer.cs">
+      <DependentUpon>EditNameTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPassword.Designer.cs">
+      <DependentUpon>EditPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProfile.Designer.cs">
+      <DependentUpon>EditProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditStartTimeTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditStartTimeTask.Designer.cs">
+      <DependentUpon>EditStartTimeTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTasks.Designer.cs">
+      <DependentUpon>EditTasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditToleranceTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditToleranceTask.Designer.cs">
+      <DependentUpon>EditToleranceTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTypeTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTypeTask.Designer.cs">
+      <DependentUpon>EditTypeTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailCheck.Designer.cs">
+      <DependentUpon>EmailCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmptyFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmptyFields.Designer.cs">
+      <DependentUpon>EmptyFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facebook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facebook.Designer.cs">
+      <DependentUpon>Facebook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GooglePlus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GooglePlus.Designer.cs">
+      <DependentUpon>GooglePlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Job.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Job.Designer.cs">
+      <DependentUpon>Job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kids.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kids.Designer.cs">
+      <DependentUpon>Kids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parents.Designer.cs">
+      <DependentUpon>Parents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordCheck.Designer.cs">
+      <DependentUpon>PasswordCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalInformation.Designer.cs">
+      <DependentUpon>PersonalInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spouse.Designer.cs">
+      <DependentUpon>Spouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Studies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Studies.Designer.cs">
+      <DependentUpon>Studies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessDeleting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessDeleting.Designer.cs">
+      <DependentUpon>SuccessDeleting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessJob.Designer.cs">
+      <DependentUpon>SuccessJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessAddKids.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessAddKids.Designer.cs">
+      <DependentUpon>SuccessAddKids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessParentsStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessParentsStudent.Designer.cs">
+      <DependentUpon>SuccessParentsStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessParentsUnemployed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessParentsUnemployed.Designer.cs">
+      <DependentUpon>SuccessParentsUnemployed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessParentsWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessParentsWorker.Designer.cs">
+      <DependentUpon>SuccessParentsWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessPers1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessPers1.Designer.cs">
+      <DependentUpon>SuccessPers1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessPers2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessPers2.Designer.cs">
+      <DependentUpon>SuccessPers2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessPers3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessPers3.Designer.cs">
+      <DependentUpon>SuccessPers3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessPers4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessPers4.Designer.cs">
+      <DependentUpon>SuccessPers4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessRegistration.Designer.cs">
+      <DependentUpon>SuccessRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessSaveKids.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessSaveKids.Designer.cs">
+      <DependentUpon>SuccessSaveKids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessSpouse1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessSpouse1.Designer.cs">
+      <DependentUpon>SuccessSpouse1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessSpouse2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessSpouse2.Designer.cs">
+      <DependentUpon>SuccessSpouse2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessTaskAdded.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessTaskAdded.Designer.cs">
+      <DependentUpon>SuccessTaskAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks.Designer.cs">
+      <DependentUpon>Tasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="twitter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="twitter.Designer.cs">
+      <DependentUpon>twitter.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CheckRegistration.resx">
+      <DependentUpon>CheckRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyPlanning.resx">
+      <DependentUpon>DailyPlanning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBconnecting.resx">
+      <DependentUpon>DBconnecting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteTask.resx">
+      <DependentUpon>DeleteTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCategoryTask.resx">
+      <DependentUpon>EditCategoryTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDateTask.resx">
+      <DependentUpon>EditDateTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEmail.resx">
+      <DependentUpon>EditEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEndTimeTask.resx">
+      <DependentUpon>EditEndTimeTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFirstName.resx">
+      <DependentUpon>EditFirstName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditingDone.resx">
+      <DependentUpon>EditingDone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditInvolvedTask.resx">
+      <DependentUpon>EditInvolvedTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditLastName.resx">
+      <DependentUpon>EditLastName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditLocationTask.resx">
+      <DependentUpon>EditLocationTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditNameTask.resx">
+      <DependentUpon>EditNameTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPassword.resx">
+      <DependentUpon>EditPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProfile.resx">
+      <DependentUpon>EditProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditStartTimeTask.resx">
+      <DependentUpon>EditStartTimeTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTasks.resx">
+      <DependentUpon>EditTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditToleranceTask.resx">
+      <DependentUpon>EditToleranceTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTypeTask.resx">
+      <DependentUpon>EditTypeTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailCheck.resx">
+      <DependentUpon>EmailCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmptyFields.resx">
+      <DependentUpon>EmptyFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facebook.resx">
+      <DependentUpon>Facebook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GooglePlus.resx">
+      <DependentUpon>GooglePlus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Job.resx">
+      <DependentUpon>Job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kids.resx">
+      <DependentUpon>Kids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parents.resx">
+      <DependentUpon>Parents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordCheck.resx">
+      <DependentUpon>PasswordCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalInformation.resx">
+      <DependentUpon>PersonalInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spouse.resx">
+      <DependentUpon>Spouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Studies.resx">
+      <DependentUpon>Studies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessDeleting.resx">
+      <DependentUpon>SuccessDeleting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessJob.resx">
+      <DependentUpon>SuccessJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessAddKids.resx">
+      <DependentUpon>SuccessAddKids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessParentsStudent.resx">
+      <DependentUpon>SuccessParentsStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessParentsUnemployed.resx">
+      <DependentUpon>SuccessParentsUnemployed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessParentsWorker.resx">
+      <DependentUpon>SuccessParentsWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessPers1.resx">
+      <DependentUpon>SuccessPers1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessPers2.resx">
+      <DependentUpon>SuccessPers2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessPers3.resx">
+      <DependentUpon>SuccessPers3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessPers4.resx">
+      <DependentUpon>SuccessPers4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessRegistration.resx">
+      <DependentUpon>SuccessRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessSaveKids.resx">
+      <DependentUpon>SuccessSaveKids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessSpouse1.resx">
+      <DependentUpon>SuccessSpouse1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessSpouse2.resx">
+      <DependentUpon>SuccessSpouse2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessTaskAdded.resx">
+      <DependentUpon>SuccessTaskAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks.resx">
+      <DependentUpon>Tasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="twitter.resx">
+      <DependentUpon>twitter.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bigender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender-dysphoria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confetti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\working-at-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hospital.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\work-from-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\social.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tools-and-utensils.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\construction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-settings-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\social-media.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miscellaneous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\protection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrows %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interface %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
